@@ -1,0 +1,29 @@
+<% include ./header.ejs %>
+<div class="container" id="masonry_container">
+    <% images.forEach(function(image){ %>
+    <div class="masonry-grid">
+
+        <a href="/detail?imageName=<%=image.imageName%>"><img style="width : 260px; height : 260px; margin-bottom : 10px" src="<%=image.imageName%>"></a>
+
+
+    </div>
+    <%});%>
+
+</div>
+<style type="text/css">
+    .masonry-grid img { max-width: 260px; }
+</style>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript">
+    var $masonry_container = $('#masonry_container');
+    $masonry_container.imagesLoaded(function(){
+        $masonry_container.masonry({
+            itemSelector : '.masonry-grid',
+            columnWidth : 270
+        });
+    });
+</script>
+
+</body>
+</html>

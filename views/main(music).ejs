@@ -1,0 +1,34 @@
+<% include ./header.ejs %>
+<div class="container">
+
+
+    <!--<% musics.forEach(function(music){%>-->
+
+    <!--<audio autoplay="autoplay"controls="controls">-->
+        <!--<source src="<%= music.musicName %>"/>-->
+    <!--</audio>-->
+
+    <!--<h1><%=music.musicName%></h1>-->
+
+
+    <!--<%});%>-->
+
+    <% musics.forEach(function(music){%>
+    <h1><%= music.musicName%></h1>
+    <audio controls>
+        <source src="<%= music.musicName%>"
+                type="audio/mpeg" />
+    </audio>
+    <%if(isLogin && JSON.stringify(userData) === '{"_id":"596efe7798742b0342b26823","id":1,"userID":"facebook:1894952327496077","userPassword":"facebook_login","displayName":"최동호","__v":0}'){%>
+
+    <a href="/delete_music/<%=music._id%>" class="btn btn-danger">삭제</a>
+    <br>
+    <%}%>
+    <%});%>
+
+   
+
+
+</div>
+</body>
+</html>

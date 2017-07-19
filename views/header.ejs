@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <style>
+        .jumbotron{
+            background-image : url('jumbotron.jpg');
+            background-size : cover;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="jumbotron">
+    <h1 class="text-center" style="color : white">JK's Sound</h1>
+    <p class="text-center" style="color : white">Music & Photos</p>
+</div>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">JK Sound</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/main_photo">Photo <span class="sr-only">(current)</span></a></li>
+                <li><a href="/main_music">Music</a></li>
+
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Upload <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+
+                        <% if(isLogin){%>
+                        <li><a href="/logout">LOG OUT</a></li>
+                        <% } else{%>
+                        <li><a href="/login">LOG IN</a></li>
+                        <li><a href="/join">JOIN</a></li>
+                        <%}%>
+                        <%if(isLogin && JSON.stringify(userData) === '{"_id":"596efe7798742b0342b26823","id":1,"userID":"facebook:1894952327496077","userPassword":"facebook_login","displayName":"최동호","__v":0}'){%>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="/image">ADD PHOTO</a></li>
+                        <li><a href="/upload_music">ADD MUSIC</a></li>
+                        <%}%>
+
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>

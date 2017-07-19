@@ -1,0 +1,21 @@
+<% include ./header.ejs %>
+
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <td><%=images.imageName%></td>
+        </tr>
+        <tr>
+            <td align="center"><img style="width : 700px; height : 700px" src="<%=images.imageName%>"></td>
+        </tr>
+    </table>
+    <%if(isLogin && JSON.stringify(userData) === '{"_id":"596efe7798742b0342b26823","id":1,"userID":"facebook:1894952327496077","userPassword":"facebook_login","displayName":"최동호","__v":0}'){%>
+    <a href="/delete_image/<%=images._id%>" class="btn btn-danger">삭제</a>
+    <%}%>
+</div>
+
+
+
+
+</body>
+</html>

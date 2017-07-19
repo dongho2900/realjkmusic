@@ -1,0 +1,21 @@
+<% include ./header.ejs %>
+<div class="container">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="text" class="form-control" name="photo_name" placeholder="이미지 이름">
+            </div>
+            <div class="form-group">
+                <input type="file" class="form-control" name="photo" placeholder="이미지">
+                <input type="hidden" name="h_photo">
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary form-control" value="업로드하기">
+            </div>
+        </form>
+    </div>
+    <div class="col-lg-4"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<% include ./header.ejs %>
+<div class="container">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+        <form action="" method="post" enctype="multipart/form-data">
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <td>
+                        업로드할 음악 제목
+                    </td>
+                    <td>
+                        <input type="text" name="music_name" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        업로드할 음악
+                    </td>
+                    <td>
+                        <input type="file" name="music" class="form-control">
+                    </td>
+                </tr>
+            </table>
+        <input type="submit" value="올리기">
+        </form>
+
+    </div>
+    <div class="col-lg-4"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<%users.forEach(function(req, res, user){
+    if(user.id == req.body.userID && user.password == req.body.userPassword){
+        res.send("로그인이 완료되었습니다")
+    }
+    else{
+        res.send("아이디나 비밀번호가 다릅니다")
+    }
+})%>
