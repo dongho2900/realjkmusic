@@ -65,7 +65,7 @@ app.use(express.static('music'))
 
 
 
-app.listen(3000, function(err){
+app.listen(80, function(err){
     if(err){
         console.log(err);
     }
